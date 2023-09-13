@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
+from .models import Foodbanks, Shelters, Pharmacy, Hospitals, CampingAreas, DrugTesting, DetoxCentre, SafeConsumptionSite
 
-# Create your views here.
+def foodbanks(request): 
+  banks = Foodbanks.objects.all()
+  return (request, {'foodbanks': banks})
+
+def safeconsumptionsites(request):
+  sites = SafeConsumptionSite.objects.all()
+  return (request, {'safeconsumptionsites': sites})
+
+def shelters(request):
+  facilities = Shelters.objects.all()
+  return (request, {'shelters': facilities})

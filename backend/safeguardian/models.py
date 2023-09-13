@@ -64,7 +64,7 @@ class Shelters(models.Model):
     # def _str_(self):
     #     return self.facility
 
-class AllowedCamping(models.Model):
+class CampingAreas(models.Model):
     facility = models.CharField(max_length=120)
     long = models.DecimalField(max_digits=9, decimal_places=6)
     long = models.DecimalField(max_digits=9, decimal_places=6)
